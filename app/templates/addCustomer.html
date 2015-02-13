@@ -1,0 +1,39 @@
+<form role="form" class="add-customer-form">
+    <div class="form-group">
+        <input type="text" class="form-control" id="customer-name" placeholder="Customer Name">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" id="domain-aliases" placeholder="Domain Aliases">
+        <p class="help-block">Multiple aliases can be specified with commas: abc.com, xyz.com</p>
+    </div>
+
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th width="20%">Prod Db</th>
+                <th width="20%">Staging Db</th>
+                <th width="20%">User</th>
+                <th width="20%">Type</th>
+                <th width="20%">Host</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="radio" name="db-configuration" value="" checked=checked /></td>
+                <td><input type="radio" name="staging-db-configuration" value="" checked=checked /></td>
+                <td colspan="3">None</td>
+            </tr>
+            {{#each dbs }}
+            <tr>
+                <td><input type="radio" name="db-configuration" value="{{ attributes.id }}" /></td>
+                <td><input type="radio" name="staging-db-configuration" value="{{ attributes.id }}" /></td>
+                <td>{{ attributes.user }}</td>
+                <td>{{ attributes.driver.type }}</td>
+                <td>{{ attributes.host }}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    
+    <div class="alert alert-warning hidden"></div>
+</form>

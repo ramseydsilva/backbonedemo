@@ -1,0 +1,18 @@
+<div class="modal-dialog" style="{{#if width }}width: {{ width }}{{/if}}">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModal">{{ title }}</h4>
+        </div>
+        <div class="modal-body">{{{ body }}}</div>
+        <div class="modal-footer">
+            {{#if buttons }}
+                {{#each buttons }}
+                    <button {{#each attr }}{{ @key }}="{{ this }}"{{/each }}>{{ text }}</button>
+                {{/each }}
+            {{ else }}
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            {{/if }}
+        </div>
+    </div>
+</div>

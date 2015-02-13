@@ -1,0 +1,4 @@
+/app/constants.json
+/build-*
+/node_modules
+/xunit.xml

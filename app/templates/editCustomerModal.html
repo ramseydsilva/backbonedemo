@@ -1,0 +1,22 @@
+<form role="form" class="edit-customer-form">
+    <div class="form-group">
+        <input type="text" class="form-control" id="customer-name" placeholder="Customer Name" value="{{ customerName }}">
+    </div>
+    
+    <h5>Domain Aliases</h5>
+    {{#each domainAliases}}
+    <div class="row edit-domain-alias da-{{id}}">
+        <div class="form-group col-md-10">
+            <input type="text" class="form-control domain-aliases" placeholder="Domain Aliases" value="{{ attributes.alias }}">            
+        </div>
+        <i class="col-md-2 fa fa-minus-circle"></i>
+    </div>
+    {{/each}}
+    
+    <div class="row add-domain-input">
+        <div class="form-group col-md-10"></div>
+        <i class="col-md-2 fa fa-plus-circle"></i>
+    </div>
+    
+    <div class="alert alert-warning hidden"></div>
+</form>

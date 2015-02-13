@@ -1,0 +1,42 @@
+.customerTable .actions .btn {
+    margin: 20px 0;
+}
+
+.add-customer-form .help-block {
+    font-size: 10px;
+    color: blue;
+    margin: 0;
+}
+
+.paginate_button {
+    cursor: pointer;
+}
+
+.add-customer-form .alert {
+    white-space: pre-line;
+}
+
+.fa-refresh {
+    padding: 10px;
+}
+
+.customerTable i {
+    cursor: pointer;
+}
+
+.customerTable i:hover {
+    color: #337ab7
+}
+
+.edit-customer-form .fa {
+    font-size: 20px;
+    padding:6px 0;
+    cursor: pointer;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.edit-customer-form .fa-plus-circle, .string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.edit-customer-form .fa-minus-circle, .key { color: red; }

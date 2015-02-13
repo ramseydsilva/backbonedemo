@@ -1,0 +1,19 @@
+<td>{{ id }}</td>
+<td>{{ status }}</td>
+<td>{{ customerName }}</td>
+<td>{{ db }}</td>
+<td>{{ type }}</td>
+<td>{{ host }}</td>
+<td>{{ domainAliases }}</td>
+<td>{{ adminUser }}</td>
+<td>{{ adminPassword }}</td>
+<td class="text-right">
+    <i class="glyphicon glyphicon-eye-open"></i>
+    <i class="glyphicon glyphicon-pencil"></i>
+    <i class="fa fa-key"></i>
+    {{#if enabled }}
+        <i class="glyphicon glyphicon-remove"></i>
+    {{ else }}
+        <i class="glyphicon glyphicon-ok"></i>
+    {{/if}}
+</td>
